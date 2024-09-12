@@ -25,3 +25,67 @@ body {
     text-wrap: balance;
   }
 }
+
+
+html, body {
+  height: 100%; /* Define altura total da página */
+  margin: 0; /* Remove margens */
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.container {
+  display: flex; /* Flexbox para o conteúdo */
+  justify-content: center; /* Centraliza o conteúdo dentro do container horizontalmente */
+  align-items: center; /* Centraliza o conteúdo dentro do container verticalmente */
+  height: 100%; /* Garante que o container ocupe a altura total */
+  flex-direction: column; /* Empilha os itens verticalmente (opcional, dependendo do layout desejado) */
+}
+
+.btn-redondo {
+  
+  background-color: #ff0000; /* Cor de fundo vermelha */
+  color: #ffffff; /* Cor do texto branca */
+  border:1; /* Remover borda */
+  border-width: 6;
+  border-radius: 50%; /* Deixa o botão redondo */
+  width: 100px; /* Largura do botão */
+  height: 100px; /* Altura do botão */
+  font-size: 16px; /* Tamanho do texto */
+  text-align: center; /* Centraliza o texto */
+  line-height: 100px; /* Alinha o texto verticalmente */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  transition: background-color 0.3s ease; /* Efeito de transição ao mudar a cor */
+}
+
+.btn-redondo:hover {
+  background-color: #cc0000; /* Cor mais escura ao passar o mouse */
+}
+.btn-redondo-volume {
+  background-color: #ff0000; /* Cor de fundo vermelha */
+  color: #ffffff; /* Cor do texto branca */
+  border: none; /* Remover borda */
+  border-radius: 50%; /* Botão redondo */
+  width: 120px; /* Largura do botão */
+  height: 120px; /* Altura do botão */
+  font-size: 18px; /* Tamanho do texto */
+  text-align: center; /* Centraliza o texto */
+  line-height: 120px; /* Alinha o texto verticalmente */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  transition: all 0.3s ease; /* Suaviza as mudanças */
+  
+  /* Efeito de volume (sombra) */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sombra para criar efeito de volume */
+}
+
+.btn-redondo-volume:hover {
+  background-color: #cc0000; /* Cor mais escura ao passar o mouse */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Aumenta a sombra no hover */
+  transform: translateY(-5px); /* Eleva levemente o botão */
+}
+
+.btn-redondo-volume:active {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reduz a sombra ao clicar */
+  transform: translateY(2px); /* Pressiona o botão para baixo */
+}

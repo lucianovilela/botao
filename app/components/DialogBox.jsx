@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DialogBox = ({ isOpen, onClose, title, children, autoCloseTime = 13000 }) => {
+const DialogBox = ({ isOpen, onClose, title, children, autoCloseTime = 5000 }) => {
   React.useEffect(() => {
     // Se o dialog estiver aberto, iniciar o timer
     if (isOpen) {

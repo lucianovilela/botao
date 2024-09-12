@@ -24,7 +24,7 @@ const Main = () => {
   const closeDialog = () => setIsDialogOpen(false);
 
   const clickHandle = async () => {
-    const f = await (await fetch('/api')).json()
+    const f = await (await fetch('/api', { cache:'no-cache'})).json()
     setFrase(f.message);
     openDialog();
   };

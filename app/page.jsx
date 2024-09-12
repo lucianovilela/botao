@@ -9,9 +9,9 @@ const Botao = ({ clickHandle }) => {
 
   return (
     <div>
-
+      
       <button className="btn-redondo-volume" onClick={clickHandle}>
-        ok
+      Foda-se
       </button>
     </div>
   );
@@ -24,12 +24,12 @@ const Main = () => {
   const closeDialog = () => setIsDialogOpen(false);
 
   const clickHandle = async () => {
-    const f= await (await fetch('/api')).json()
+    const f = await (await fetch('/api')).json()
     setFrase(f.message);
     openDialog();
   };
   return (
-    <div class="container">
+    <div className="container">
       <div style={{ marginBotton: '4px' }}>
         <Botao clickHandle={clickHandle} />
       </div>

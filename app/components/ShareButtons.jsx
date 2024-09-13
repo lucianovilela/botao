@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWhatsapp, faInstagram, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faWhatsapp,  faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const ShareButtons = ({ url, text }) => {
   const encodedUrl = encodeURIComponent(url);

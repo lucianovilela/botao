@@ -4,6 +4,8 @@ import "./globals.css";
 
 import SEO from '@/app/components/SEO';
 
+import Analytics from '@/app/components/Analytics';
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -26,12 +28,20 @@ export default function RootLayout({
     <html lang="pt-br">
       <head>
 
-        <SEO/>
+        <SEO />
+        <Analytics />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+
+
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJXQB2G7"
+          height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
+
+
       </body>
     </html>
   );

@@ -19,7 +19,7 @@ const ShareButtons = ({ url, text }) => {
         <FontAwesomeIcon icon={faWhatsapp} size="lg" />
       </a>
 
-      {/* Instagram (não tem compartilhamento direto de links) */}
+      {/* Instagram (não tem compartilhamento direto de links) 
       <a
         href="https://www.instagram.com"
         target="_blank"
@@ -29,6 +29,7 @@ const ShareButtons = ({ url, text }) => {
       >
         <FontAwesomeIcon icon={faInstagram} size="lg" />
       </a>
+      */}
 
       {/* Facebook */}
       <a

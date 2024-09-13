@@ -1,17 +1,18 @@
 "use client"
-//import Image from "next/image";
+import { getRandomFrase } from '@/app/components/Frases';
 import React from 'react';
 
-
 import DialogBox from '@/app/components/DialogBox';
+import Footer from '@/app/components/Footer';
+
 
 const Botao = ({ clickHandle }) => {
 
   return (
     <div>
-      
+
       <button className="btn-redondo-volume" onClick={clickHandle}>
-      Foda-se
+        Foda-se
       </button>
     </div>
   );
@@ -23,9 +24,9 @@ const Main = () => {
   const openDialog = () => setIsDialogOpen(true);
   const closeDialog = () => setIsDialogOpen(false);
 
-  const clickHandle = async () => {
-    const f = await (await fetch('/api', { cache:'no-cache'})).json()
-    setFrase(f.message);
+  const clickHandle =  () => {
+    const f = getRandomFrase();
+    setFrase(f);
     openDialog();
   };
   return (
@@ -36,6 +37,7 @@ const Main = () => {
       <DialogBox isOpen={isDialogOpen} onClose={closeDialog} title="Vida minimalista">
         <p>{frase}</p>
       </DialogBox>
+      <Footer />
     </div>
   );
 };

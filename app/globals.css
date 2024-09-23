@@ -2,15 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Definindo variáveis de cores para os temas claro e escuro */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --button-bg: #ff0000;
+  --button-hover-bg: #cc0000;
+  --button-text-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --button-bg: #b30000; /* Cor de fundo dos botões no tema escuro */
+    --button-hover-bg: #990000; /* Cor de fundo dos botões no hover no tema escuro */
+    --button-text-color: #ffffff;
+    --shadow-color: rgba(255, 255, 255, 0.4); /* Sombra mais clara para tema escuro */
   }
 }
 
@@ -25,7 +34,6 @@ body {
     text-wrap: balance;
   }
 }
-
 
 html, body {
   height: 100%; /* Define altura total da página */
@@ -43,12 +51,11 @@ html, body {
   flex-direction: column; /* Empilha os itens verticalmente (opcional, dependendo do layout desejado) */
 }
 
+/* Botão redondo */
 .btn-redondo {
-  
-  background-color: #ff0000; /* Cor de fundo vermelha */
-  color: #ffffff; /* Cor do texto branca */
-  border:1; /* Remover borda */
-  border-width: 6;
+  background-color: var(--button-bg); /* Cor de fundo dinâmica */
+  color: var(--button-text-color); /* Cor do texto dinâmica */
+  border: none; /* Remover borda */
   border-radius: 50%; /* Deixa o botão redondo */
   width: 100px; /* Largura do botão */
   height: 100px; /* Altura do botão */
@@ -60,11 +67,13 @@ html, body {
 }
 
 .btn-redondo:hover {
-  background-color: #cc0000; /* Cor mais escura ao passar o mouse */
+  background-color: var(--button-hover-bg); /* Cor de hover dinâmica */
 }
+
+/* Botão redondo com efeito de volume */
 .btn-redondo-volume {
-  background-color: #ff0000; /* Cor de fundo vermelha */
-  color: #ffffff; /* Cor do texto branca */
+  background-color: var(--button-bg); /* Cor de fundo dinâmica */
+  color: var(--button-text-color); /* Cor do texto dinâmica */
   border: none; /* Remover borda */
   border-radius: 50%; /* Botão redondo */
   width: 120px; /* Largura do botão */
@@ -76,16 +85,16 @@ html, body {
   transition: all 0.3s ease; /* Suaviza as mudanças */
   
   /* Efeito de volume (sombra) */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Sombra para criar efeito de volume */
+  box-shadow: 0 8px 15px var(--shadow-color); /* Sombra dinâmica */
 }
 
 .btn-redondo-volume:hover {
-  background-color: #cc0000; /* Cor mais escura ao passar o mouse */
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5); /* Aumenta a sombra no hover */
+  background-color: var(--button-hover-bg); /* Cor de hover dinâmica */
+  box-shadow: 0 12px 20px var(--shadow-color); /* Sombra dinâmica no hover */
   transform: translateY(-5px); /* Eleva levemente o botão */
 }
 
 .btn-redondo-volume:active {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Reduz a sombra ao clicar */
+  box-shadow: 0 4px 10px var(--shadow-color); /* Reduz a sombra ao clicar */
   transform: translateY(2px); /* Pressiona o botão para baixo */
 }

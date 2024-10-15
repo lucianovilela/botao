@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const ProdutosRecomendados = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 1;
+  const itemsPerPage = 10;
 
   // Calcula o índice do primeiro e do último item da página atual
   const indexOfLastItem = currentPage * itemsPerPage;

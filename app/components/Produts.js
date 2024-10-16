@@ -13,6 +13,14 @@
       image: "https://m.media-amazon.com/images/I/815iPX0SgkL._SY466_.jpg",
       affiliateLink: "https://amzn.to/3TWrLLJ"
     },
+    {
+      id: '3',
+      name: "Desculpe o exagero, mas não sei sentir pouco",
+      description: "No amor, não há espaço para o raso. Ele não existe na superfície ou mesmo na escassez. Amor é para quem tem coragem de se atirar na intensidade e se esbaldar na abundância. Então, nem perca tempo em ficar onde seus pés alcançam. É no profundo que ele acontece.",
+      image: "https://m.media-amazon.com/images/I/7149N1NL1+L._SY466_.jpg",
+      affiliateLink: "https://amzn.to/3Y5ZmUN"
+    },
+    
   ];
 
   export default products;
